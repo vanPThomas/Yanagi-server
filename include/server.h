@@ -24,13 +24,14 @@ class Server
         fd_set readfds;
         int max_socket = -1;
         int masterSocket = -1;
-        int maxClients;
 
+        int maxClients;
         std::vector<int> clientSocket;
+
+
         sockaddr_in address{};
         int addrlen = 0;
 
         int initializeServerSocket();
         void handleSystemCallError(std::string errorMsg);
-
 }

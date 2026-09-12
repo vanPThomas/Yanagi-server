@@ -7,6 +7,7 @@ Server::server(int port, int maxClients) : PORT(port), maxClients(maxClients)
     std::cout << "Waiting for connections ... \n";
 }
 
+//main server loop
 void Server::run()
 {
     while(true)
