@@ -1,6 +1,10 @@
 Server::server(int port, int maxClients) : PORT(port), maxClients(maxClients)
 {
     masterSocket = initializeServerSocket();
+    clientSocket.assign(maxClients, 0);
+    addrlen = sizeof(address);
+
+    std::cout << "Waiting for connections ... \n";
 }
 
 void Server::run()
@@ -13,6 +17,8 @@ void Server::run()
         // add mastersocket to socket set
         FD_SET(masterSocket, &readfds);
         max_socket = masterSocket;
+
+
     }
 }
 

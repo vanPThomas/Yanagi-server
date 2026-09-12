@@ -26,6 +26,10 @@ class Server
         int masterSocket = -1;
         int maxClients;
 
+        std::vector<int> clientSocket;
+        sockaddr_in address{};
+        int addrlen = 0;
+
         int initializeServerSocket();
         void handleSystemCallError(std::string errorMsg);
 
