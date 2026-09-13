@@ -18,8 +18,6 @@ void Server::run()
         // add mastersocket to socket set
         FD_SET(masterSocket, &readfds);
         max_socket = masterSocket;
-
-
     }
 }
 
@@ -56,3 +54,4 @@ void Server::handleSystemCallError(std::string errorMsg)
               << ": " << errorMsg << " (errno=" << errno << ")\n";
     exit(EXIT_FAILURE);
 }
+
