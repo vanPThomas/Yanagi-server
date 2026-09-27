@@ -6,7 +6,6 @@ struct cpuCore
     std::string model_name;        // "model name"
     std::string cpu_MHz;
     std::string cash_size;
-
 }
 
 
