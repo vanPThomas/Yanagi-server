@@ -1,14 +1,15 @@
 // Gather and return CPU info in the form of a cpu core struct
-
-std::string Server::retrieveCPUInfo()
+std::vector<cpuCore> Server::retrieveCPUInfo()
 {
+    std::vector<cpuCore> CPUCores{};
+
     std::ifstream in("/proc/cpuinfo");
     if (!in)
     {
         std::cout << "Can't locate CPU info\n";
     }
 
-    std::string line;
+        std::string line;
     while (std::getline(in, line))
     {
         auto pos = line.find(':');
