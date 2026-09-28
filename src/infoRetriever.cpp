@@ -1,3 +1,5 @@
+// Gather and return CPU info in the form of a cpu core struct
+
 std::string Server::retrieveCPUInfo()
 {
     std::ifstream in("/proc/cpuinfo");
