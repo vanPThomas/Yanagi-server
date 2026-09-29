@@ -1,13 +1,10 @@
 
-struct cpuCore
-{
-    int logical_id = -1;      // "processor"
-    std::string model;        // Model
-    std::string model_name;        // "model name"
+struct cpuCore {
+    int logical_id = -1;
+    std::string model_name;
     std::string cpu_MHz;
-    std::string cash_size;
-}
-
+    std::string cache_size;
+};
 
 class InfoRetriever
 {
