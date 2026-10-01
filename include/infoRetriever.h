@@ -6,6 +6,13 @@ struct cpuCore {
     std::string cache_size;
 };
 
+struct ramInfo {
+    long mem_total_kb = 0;
+    long mem_available_kb = 0;
+    long swap_total_kb = 0;
+    long swap_free_kb = 0;
+};
+
 class InfoRetriever
 {
     public:
