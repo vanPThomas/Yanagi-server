@@ -1,3 +1,5 @@
+#include "server.h"
+
 Server::server(int port, int maxClients) : PORT(port), maxClients(maxClients)
 {
     masterSocket = initializeServerSocket();

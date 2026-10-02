@@ -1,4 +1,4 @@
-
+//CPU struct
 struct cpuCore {
     int logical_id = -1;
     std::string model_name;
@@ -6,6 +6,7 @@ struct cpuCore {
     std::string cache_size;
 };
 
+//RAM struct
 struct ramInfo {
     long mem_total_kb = 0;
     long mem_available_kb = 0;

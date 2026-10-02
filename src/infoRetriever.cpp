@@ -1,3 +1,5 @@
+#include "infoRetriever.h"
+
 // Gather and return CPU info in the form of a cpu core struct
 std::vector<cpuCore> Server::retrieveCPUInfo()
 {
@@ -47,6 +49,8 @@ std::vector<cpuCore> Server::retrieveCPUInfo()
     return cores;
 }
 
+
+// retrieve RAM info
 ramInfo Server::retrieveRAMInfo()
 {
     ramInfo ram;
