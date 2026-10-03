@@ -16,6 +16,8 @@ add_compile_definitions(PROJECT_VERSION="${PROJECT_VERSION}")
 # Yanagi-server
 add_executable(yanagi-server
     src/main.cpp
+    src/server.cpp
+    src/infoRetriever.cpp
 )
 
 # Include directories for our code + ImGui
