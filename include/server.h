@@ -12,6 +12,7 @@
 #include <cstring>         // for memset, etc.
 #include <cstdlib>
 #include <sys/types.h>
+#include "infoRetriever.h"
 
 class Server
 {
@@ -34,4 +35,7 @@ class Server
 
         int initializeServerSocket();
         void handleSystemCallError(std::string errorMsg);
+        
+        std::vector<cpuCore> cores;
+        ramInfo ramData;
 }

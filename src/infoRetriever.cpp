@@ -1,7 +1,7 @@
 #include "infoRetriever.h"
 
 // Gather and return CPU info in the form of a cpu core struct
-std::vector<cpuCore> Server::retrieveCPUInfo()
+std::vector<cpuCore> infoRetriever::retrieveCPUInfo()
 {
     std::vector<cpuCore> cores;
     std::ifstream in("/proc/cpuinfo");
@@ -51,7 +51,7 @@ std::vector<cpuCore> Server::retrieveCPUInfo()
 
 
 // retrieve RAM info
-ramInfo Server::retrieveRAMInfo()
+ramInfo infoRetriever::retrieveRAMInfo()
 {
     ramInfo ram;
     std::ifstream in("/proc/meminfo");
