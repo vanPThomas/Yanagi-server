@@ -20,6 +20,9 @@ void Server::run()
         // add mastersocket to socket set
         FD_SET(masterSocket, &readfds);
         max_socket = masterSocket;
+
+        cores = retrieveCPUInfo();
+        ramData = retrieveRAMInfo();
     }
 }
 
