@@ -21,6 +21,7 @@ void Server::run()
         FD_SET(masterSocket, &readfds);
         max_socket = masterSocket;
 
+        // call up pc information
         cores = retrieveCPUInfo();
         ramData = retrieveRAMInfo();
     }
